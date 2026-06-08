@@ -1,66 +1,59 @@
-# Task 1 - Basic REST API with CRUD Operations
+# Task 2 - Database Integration
 
-This project is a simple REST API built using Node.js and Express.js.
+## Description
+This project demonstrates database integration using Node.js, Express.js, and MongoDB Atlas.
 
 ## Features
+- Connect Node.js application to MongoDB Atlas
+- Create new users
+- Retrieve all users
+- Delete users
+- Store data permanently in MongoDB
 
-- Create a user
-- Get all users
-- Get user by ID
-- Update user
-- Delete user
-- Basic input validation
-- Proper error handling
-
-## Tech Stack
-
+## Technologies Used
 - Node.js
 - Express.js
-- Thunder Client for API testing
+- MongoDB Atlas
+- Mongoose
+- Dotenv
 
-## User Fields
+## Installation
 
-Each user has:
+1. Clone the repository
+2. Install dependencies
 
-- id
-- name
-- email
-- age
+npm install
+
+3. Create a .env file
+
+MONGO_URI=your_mongodb_connection_string
+
+4. Run the server
+
+node server.js
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | / | Check server status |
-| POST | /users | Create a new user |
-| GET | /users | Get all users |
-| GET | /users/:id | Get user by ID |
-| PUT | /users/:id | Update user |
-| DELETE | /users/:id | Delete user |
+### GET /users
+Fetch all users
 
-## How to Run
+### POST /users
+Add a new user
 
-```bash
-npm install
-node server.js
-
-Server will run on:
-
-http://localhost:3000
-
-Validation
-
-If required fields are missing:
-
+Example:
 {
-  "message": "All fields are required"
+  "name": "Isha",
+  "email": "isha@gmail.com",
+  "age": 20
 }
 
-If email format is invalid:
+### DELETE /users/:id
+Delete a user by ID
 
-{
-  "message": "Invalid email format"
-}
-Author
+## Output
+
+Data is stored and retrieved from MongoDB Atlas successfully.
+
+## Author
 
 Isha Trivedi
